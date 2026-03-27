@@ -2156,6 +2156,10 @@ a.contact-info-value:hover {
         padding: 0 24px;
     }
 
+    .hero-logo {
+        max-width: 280px;
+    }
+
     .intro {
         padding: 80px 0;
     }
