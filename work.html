@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work — NEVOR Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo" aria-label="Nevor Studio home">
+                <img class="nav-logo-image" src="assets/nevor-logo.png" alt="Nevor Studio logo">
+            </a>
+            <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="work.html" class="active">Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Work Hero -->
+    <section class="page-hero page-hero-dark">
+        <div class="container">
+            <h1 class="page-hero-headline light fade-in work-hero-title">Selected Work</h1>
+            <p class="page-hero-sub light fade-in work-hero-sub">A curated look at projects we've brought to life.</p>
+        </div>
+    </section>
+
+    <!-- Work Grid -->
+    <section class="work-section">
+        <div class="container">
+            <div class="work-grid-full">
+                <a class="work-card-link fade-in" href="menacity.html" aria-label="View Menacity case study">
+                    <div class="work-card">
+                        <div class="work-card-image">
+                            <img class="work-card-photo" src="assets/menacity-hero-work.png" alt="Menacity branding">
+                        </div>
+                        <h3 class="work-card-title">Menacity</h3>
+                        <span class="work-card-tag">Branding Identity</span>
+                        <p class="work-card-desc">A clean, purposeful streetwear identity built to connect deeply with a growing audience.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="work-cta-section">
+        <div class="work-cta-content">
+            <h2 class="work-cta-headline">Want to see your business here?</h2>
+            <p class="work-cta-subtext">Let's create something you're proud of.</p>
+            <a href="contact.html" class="work-cta-button">Start Your Project</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <a href="index.html" class="nav-logo">
+                    <img class="footer-logo-image" src="assets/nevor-logo.png" alt="Nevor Studio logo">
+                </a>
+            </div>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <p class="footer-tagline">Never Ordinary</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nevor Studio. All rights reserved.</p>
+            <p>Crafted by Nevor Studio</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menacity — NEVOR Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav nav-dark" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo" aria-label="Nevor Studio home">
+                <img class="nav-logo-image" src="assets/nevor-logo.png" alt="Nevor Studio logo">
+            </a>
+            <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="work.html" class="active">Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Work Card Carousel -->
+    <section class="work-carousel-section">
+        <!-- Left Arrow -->
+        <button class="carousel-arrow carousel-arrow-left" id="carouselPrevBtn" aria-label="Previous slide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+        </button>
+
+        <!-- Carousel Container -->
+        <div class="carousel-wrapper">
+            <div class="carousel-items" id="carouselItems">
+                <!-- Card 1 -->
+                <div class="carousel-card active" data-index="0">
+                    <div class="card-header">
+                        <h1 class="card-brand-name">Menacity</h1>
+                        <h2 class="card-category">Branding Identity</h2>
+                    </div>
+                    <div class="card-image-container">
+                        <img class="card-image" src="assets/menacity-hero-work.png" alt="Menacity branding">
+                    </div>
+                    <div class="card-content">
+                        <p class="card-description">We partnered with Menacity Clothing to develop a branding identity that would elevate their presence. The goal was to create a clean, purposeful, and emotionally resonant brand experience that connects deeply with their target audience.</p>
+                        <div class="card-meta">
+                            <div class="meta-row">
+                                <span class="meta-label">Client:</span>
+                                <span class="meta-value">Menacity Clothing</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-label">Scope:</span>
+                                <span class="meta-value">Full Branding Identity</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-label">Industry:</span>
+                                <span class="meta-value">Streetwear Fashion</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-label">Timeline:</span>
+                                <span class="meta-value">Current</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="carousel-card" data-index="1">
+                    <div class="card-header">
+                        <h1 class="card-brand-name">Menacity</h1>
+                        <h2 class="card-category">Brand Vision</h2>
+                    </div>
+                    <div class="card-image-container">
+                        <img class="card-image" src="assets/menacity-01.png" alt="Menacity design">
+                    </div>
+                    <div class="card-content">
+                        <p class="card-description">Menacity Clothing approached us with the vision of building a modern streetwear brand with a clear identity and a strong digital presence. We created a unified visual style and brand voice that reflects their aesthetic and connects directly with their community.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="carousel-card" data-index="2">
+                    <div class="card-header">
+                        <h1 class="card-brand-name">Menacity</h1>
+                        <h2 class="card-category">Business Results</h2>
+                    </div>
+                    <div class="card-image-container">
+                        <img class="card-image" src="assets/menacity-03.png" alt="Menacity results">
+                    </div>
+                    <div class="card-content">
+                        <p class="card-description">Within the first five months, Menacity generated over $62,000 in sales through segmented email and SMS marketing. Their redesigned Shopify website has since attracted more than 150,000 user sessions, strengthening both visibility and conversion.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="carousel-card" data-index="3">
+                    <div class="card-header">
+                        <h1 class="card-brand-name">Menacity</h1>
+                        <h2 class="card-category">Social Growth</h2>
+                    </div>
+                    <div class="card-image-container">
+                        <img class="card-image" src="assets/menacity-06.png" alt="Menacity community">
+                    </div>
+                    <div class="card-content">
+                        <p class="card-description">Through strategic social content and paid advertising, Menacity grew a loyal community of more than 60,000 followers. The brand also gained recognition from notable figures who chose to wear Menacity apparel.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="carousel-card" data-index="4">
+                    <div class="card-header">
+                        <h1 class="card-brand-name">Menacity</h1>
+                        <h2 class="card-category">Brand System</h2>
+                    </div>
+                    <div class="card-image-container">
+                        <img class="card-image" src="assets/menacity-04.png" alt="Menacity brand system">
+                    </div>
+                    <div class="card-content">
+                        <p class="card-description">We developed a complete brand identity system including logo direction, visuals, garment graphics, and campaign collateral. This visual foundation was built to feel modern, intentional, and rooted in streetwear culture.</p>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="carousel-card" data-index="5">
+                    <div class="card-header">
+                        <h1 class="card-brand-name">Menacity</h1>
+                        <h2 class="card-category">Content & Campaigns</h2>
+                    </div>
+                    <div class="card-image-container">
+                        <img class="card-image" src="assets/menacity-05.png" alt="Menacity campaigns">
+                    </div>
+                    <div class="card-content">
+                        <p class="card-description">We directed content production for social platforms and managed segmented email and SMS campaigns. Paid media execution helped expand reach, improve conversion, and sustain growth.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators" id="carouselIndicators">
+                <button class="indicator active" data-index="0" aria-label="Slide 1"></button>
+                <button class="indicator" data-index="1" aria-label="Slide 2"></button>
+                <button class="indicator" data-index="2" aria-label="Slide 3"></button>
+                <button class="indicator" data-index="3" aria-label="Slide 4"></button>
+                <button class="indicator" data-index="4" aria-label="Slide 5"></button>
+                <button class="indicator" data-index="5" aria-label="Slide 6"></button>
+            </div>
+        </div>
+
+        <!-- Right Arrow -->
+        <button class="carousel-arrow carousel-arrow-right" id="carouselNextBtn" aria-label="Next slide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+        </button>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="work-cta-section">
+        <div class="work-cta-content">
+            <h2 class="work-cta-headline">Ready to elevate your brand?</h2>
+            <p class="work-cta-subtext">Let's create something remarkable together.</p>
+            <a href="contact.html" class="work-cta-button">Start Your Project</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <a href="index.html" class="nav-logo">
+                    <img class="footer-logo-image" src="assets/nevor-logo.png" alt="Nevor Studio logo">
+                </a>
+            </div>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <p class="footer-tagline">Never Ordinary</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nevor Studio. All rights reserved.</p>
+            <p>Crafted by Nevor Studio</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
