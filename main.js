@@ -221,4 +221,85 @@
         updateCarousel();
     }
 
+    /* --- Contact Form Submission via Formspree --- */
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formStatus = document.getElementById('formStatus');
+            const submitBtn = contactForm.querySelector('.btn-submit');
+            const originalBtnText = submitBtn.textContent;
+
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            formStatus.classList.remove('success', 'error');
+            formStatus.style.display = 'none';
+
+            // Prepare form data
+            const formData = new FormData(contactForm);
+
+            // Send to Formspree
+            fetch('https://formspree.io/f/xqegpenp', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(function (response) {
+                if (response.ok) {
+                    // Success
+                    formStatus.textContent = "✓ Thank you for reaching out! We'll be in touch shortly.";
+                    formStatus.classList.add('success');
+                    formStatus.style.display = 'block';
+                    contactForm.reset();
+                    submitBtn.textContent = originalBtnText;
+                    submitBtn.disabled = false;
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(function (error) {
+                // Error
+                formStatus.textContent = '✗ Something went wrong. Please try again or email us directly.';
+                formStatus.classList.add('error');
+                formStatus.style.display = 'block';
+                submitBtn.textContent = originalBtnText;
+                submitBtn.disabled = false;
+                console.error('Form error:', error);
+            });
+        });
+    }
+
+    /* --- GSAP Animations --- */
+    if (typeof gsap !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Service Cards - Staggered fade in with placement effect
+        const serviceCards = document.querySelectorAll('.service-card');
+        if (serviceCards.length > 0) {
+            gsap.fromTo(
+                serviceCards,
+                {
+                    opacity: 0,
+                    scale: 0.95
+                },
+                {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 0.7,
+                    stagger: 0.15,
+                    ease: 'back.out',
+                    scrollTrigger: {
+                        trigger: '.services-overview',
+                        start: 'top 70%',
+                        once: true
+                    }
+                }
+            );
+        }
+    }
+
 })();

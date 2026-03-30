@@ -2041,6 +2041,30 @@ a.contact-info-value:hover {
     border-bottom-color: var(--navy);
 }
 
+/* Override autofill background color */
+.contact-form input:-webkit-autofill,
+.contact-form input:-webkit-autofill:hover,
+.contact-form input:-webkit-autofill:focus,
+.contact-form input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px var(--dark) inset !important;
+    -webkit-text-fill-color: var(--white) !important;
+    border-bottom-color: rgba(245, 242, 236, 0.2) !important;
+}
+
+.contact-form input:-webkit-autofill:focus {
+    border-bottom-color: var(--navy) !important;
+}
+
+/* Remove spell-check red underline styling */
+.contact-form input::-webkit-spelling-error-underline {
+    text-decoration-color: transparent;
+    text-decoration-style: none;
+}
+
+.contact-form input::spelling {
+    color: var(--white);
+}
+
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
     color: rgba(245, 242, 236, 0.3);
@@ -2086,6 +2110,32 @@ a.contact-info-value:hover {
     letter-spacing: 0;
     color: var(--navy);
     font-weight: 500;
+}
+
+/* Form Status Message */
+#formStatus {
+    display: none;
+    padding: 16px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+#formStatus.success {
+    display: block;
+    background-color: rgba(27, 58, 107, 0.15);
+    color: rgba(245, 242, 236, 0.9);
+    border: 1px solid rgba(27, 58, 107, 0.3);
+}
+
+#formStatus.error {
+    display: block;
+    background-color: rgba(220, 53, 69, 0.15);
+    color: rgba(220, 53, 69, 0.9);
+    border: 1px solid rgba(220, 53, 69, 0.3);
 }
 
 /* ============================================

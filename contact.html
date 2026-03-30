@@ -3,11 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact — NEVOR Studio</title>
+    <meta name="description" content="Get in touch with NEVOR Studio. We're based in Los Angeles, CA. Let's discuss your branding, web design, or content project.">
+    <meta name="theme-color" content="#000000">
+    <meta name="robots" content="index, follow">
+    <title>Contact — NEVOR Studio | Get in Touch</title>
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Contact — NEVOR Studio">
+    <meta property="og:description" content="Ready to start your project? Reach out to us. We're here to discuss your branding, web design, and digital growth goals.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nevor.studio/contact.html">
+    <meta property="og:image" content="https://nevor.studio/assets/nevor-logo.png">
+    <meta property="og:site_name" content="NEVOR Studio">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Contact — NEVOR Studio">
+    <meta name="twitter:description" content="Get in touch with NEVOR Studio. Let's build something extraordinary together.">
+    <meta name="twitter:image" content="https://nevor.studio/assets/nevor-logo.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nevor.studio/contact.html">
+    <link rel="icon" type="image/png" href="assets/nevor-studio-favicon.png?v=2">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "NEVOR Studio Contact",
+        "description": "Contact page for NEVOR Studio to inquire about branding, web design, and digital services",
+        "url": "https://nevor.studio/contact.html",
+        "mainEntity": {
+            "@type": "LocalBusiness",
+            "name": "NEVOR Studio",
+            "description": "Brand, web design, and content services for small businesses",
+            "image": "https://nevor.studio/assets/nevor-logo.png",
+            "logo": "https://nevor.studio/assets/nevor-logo.png",
+            "url": "https://nevor.studio/",
+            "email": "nevorstudios@gmail.com",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "",
+                "addressLocality": "Los Angeles",
+                "addressRegion": "CA",
+                "postalCode": "",
+                "addressCountry": "US"
+            },
+            "sameAs": [
+                "https://www.instagram.com/nevorstudio",
+                "https://www.facebook.com/nevorstudio"
+            ],
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "Customer Service",
+                "email": "nevorstudios@gmail.com",
+                "url": "https://nevor.studio/contact.html"
+            }
+        }
+    }
+    </script>
 </head>
 <body>
 
@@ -49,7 +109,7 @@
                 <div class="contact-info">
                     <div class="contact-info-item">
                         <span class="contact-info-label">Email</span>
-                        <a href="mailto:hello@nevorstudio.com" class="contact-info-value">hello@nevorstudio.com</a>
+                        <a href="mailto:nevorstudios@gmail.com" class="contact-info-value">nevorstudios@gmail.com</a>
                     </div>
                     <div class="contact-info-item">
                         <span class="contact-info-label">Instagram</span>
@@ -63,15 +123,22 @@
             </div>
         </div>
         <div class="contact-right">
-            <form class="contact-form fade-in" action="#" method="POST">
+            <form class="contact-form fade-in" id="contactForm">
+                <div id="formStatus"></div>
+
+                <!-- Name -->
                 <div class="form-group">
                     <label for="name">Name *</label>
                     <input type="text" id="name" name="name" required placeholder="Your full name">
                 </div>
+
+                <!-- Business Name -->
                 <div class="form-group">
                     <label for="business">Business Name</label>
-                    <input type="text" id="business" name="business" placeholder="Your business name">
+                    <input type="text" id="business" name="business" placeholder="Your business name" spellcheck="false">
                 </div>
+
+                <!-- Email & Phone -->
                 <div class="form-row">
                     <div class="form-group">
                         <label for="email">Email *</label>
@@ -82,20 +149,56 @@
                         <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000">
                     </div>
                 </div>
+
+                <!-- Website -->
                 <div class="form-group">
-                    <label for="service">Service Interest</label>
-                    <select id="service" name="service">
-                        <option value="" disabled selected>Select a service</option>
-                        <option value="foundation">Foundation</option>
-                        <option value="digital-presence">Digital Presence</option>
-                        <option value="care-plan">Care Plan</option>
-                        <option value="not-sure">Not Sure</option>
-                    </select>
+                    <label for="website">Website URL <span class="optional">(optional)</span></label>
+                    <input type="text" id="website" name="website" placeholder="yourbusiness.com">
                 </div>
+
+                <!-- Social Media -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="instagram">Instagram <span class="optional">(optional)</span></label>
+                        <input type="text" id="instagram" name="instagram" placeholder="@yourbusiness">
+                    </div>
+                    <div class="form-group">
+                        <label for="other-social">Other Social Media <span class="optional">(optional)</span></label>
+                        <input type="text" id="other-social" name="other_social" placeholder="TikTok, Facebook, LinkedIn, etc.">
+                    </div>
+                </div>
+
+                <!-- Service Interest & Referral -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="service">What are you looking for? *</label>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>Select a service</option>
+                            <option value="branding">Branding</option>
+                            <option value="website">Website</option>
+                            <option value="full-digital-presence">Full Digital Presence</option>
+                            <option value="ongoing-support">Ongoing Support</option>
+                            <option value="not-sure">Not Sure Yet</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="referral">How did you hear about us?</label>
+                        <select id="referral" name="referral">
+                            <option value="" disabled selected>Select one</option>
+                            <option value="instagram">Instagram</option>
+                            <option value="google">Google</option>
+                            <option value="referral">Referral</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Project Details -->
                 <div class="form-group">
                     <label for="message">Tell us about your project</label>
-                    <textarea id="message" name="message" rows="5" placeholder="What are you looking to build? Any timeline or budget in mind?"></textarea>
+                    <textarea id="message" name="message" rows="5" placeholder="What are you looking to build? Any goals, ideas, or timeline in mind?"></textarea>
                 </div>
+
                 <button type="submit" class="btn btn-submit">Send Message</button>
             </form>
         </div>
