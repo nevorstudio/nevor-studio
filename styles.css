@@ -1209,9 +1209,12 @@ body::before {
 /* Care Plans Grid */
 .care-plans-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 32px;
     margin-top: 48px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .care-card {
@@ -1219,6 +1222,8 @@ body::before {
     padding: 48px 36px;
     transition: all 0.4s ease;
     box-shadow: 0 4px 12px rgba(27, 58, 107, 0.15);
+    display: flex;
+    flex-direction: column;
 }
 
 .care-card:hover {
@@ -1228,10 +1233,27 @@ body::before {
 
 .care-card-title {
     font-family: var(--font-serif);
-    font-size: 26px;
+    font-size: 34px;
     font-weight: 600;
     color: var(--cream);
-    margin-bottom: 16px;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.care-card-divider {
+    border: none;
+    border-top: 1px solid rgba(245, 242, 236, 0.12);
+    margin: 8px 0 20px;
+}
+
+.care-card-price {
+    font-family: var(--font-sans);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--navy);
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 24px;
 }
 
 .care-card-desc {
@@ -1240,6 +1262,38 @@ body::before {
     color: var(--warm-gray);
     line-height: 1.7;
     margin-bottom: 24px;
+}
+
+.care-card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.care-card-list li {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    color: var(--warm-gray);
+    padding: 8px 0;
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.care-card-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--navy);
 }
 
 /* ============================================
